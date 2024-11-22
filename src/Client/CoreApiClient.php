@@ -46,8 +46,8 @@ class CoreApiClient extends AuthClient
     {
         $cookieJar = $this->getClient()->getCookieJar();
         return (
-            $cookieJar->getCookie($this->d2lHost ?? '', '/', 'd2lSecureSessionVal') !== null
-            && $cookieJar->getCookie($this->d2lHost ?? '', '/', 'd2lSessionVal') !== null
+            $cookieJar->getCookie($this->config->d2lHost, '/', 'd2lSecureSessionVal') !== null
+            && $cookieJar->getCookie($this->config->d2lHost, '/', 'd2lSessionVal') !== null
         );
     }
 

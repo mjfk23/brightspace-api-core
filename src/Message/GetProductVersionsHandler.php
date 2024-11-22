@@ -31,7 +31,7 @@ class GetProductVersionsHandler extends MessageHandler
     {
         return $requestBuilder
             ->setMethod('GET')
-            ->setUri('https://' . $this->d2lHost . '/api/d2l/api/versions/')
+            ->setUri('https://' . $this->d2lHost . '/d2l/api/versions/')
             ->getRequest();
     }
 
@@ -46,7 +46,7 @@ class GetProductVersionsHandler extends MessageHandler
         ServerRequestInterface $request
     ): mixed {
         if ($response->getStatusCode() !== 200) {
-            throw new \RuntimeException();
+            throw new \RuntimeException("Status code: " . $response->getStatusCode());
         }
 
         return Cast::toTypedMap(

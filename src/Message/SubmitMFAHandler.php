@@ -34,7 +34,7 @@ class SubmitMFAHandler extends MessageHandler
     protected function createRequest(RequestBuilder $requestBuilder): ServerRequestInterface
     {
         return $requestBuilder
-            ->setMethod('GET')
+            ->setMethod('POST')
             ->setUri('https://' . $this->d2lHost . LoginUri::MFA->value)
             ->setQueryParams([
                 'ou' => $this->rootOrgUnit,
@@ -58,10 +58,8 @@ class SubmitMFAHandler extends MessageHandler
         ResponseInterface $response,
         ServerRequestInterface $request
     ): mixed {
-        return LoginUri::tryFrom(
-            ($response->getStatusCode() === 302)
-                ? ($response->getHeader('Location')[0] ?? '')
-                : ''
-        );
+        return ($response->getStatusCode() === 200)
+            ? LoginUri::PROCESS_LOGIN
+            : null;
     }
 }
