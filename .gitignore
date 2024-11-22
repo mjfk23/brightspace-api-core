@@ -1,0 +1,6 @@
+.*
+!.env
+!.gitignore
+vendor
+phpcs.xml
+phpstan.neon
