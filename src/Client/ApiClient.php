@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Brightspace\Api\Http\Client;
+namespace Brightspace\Api\Core\Client;
 
 use Brightspace\Api\Core\Client\CoreClient;
 use Brightspace\Api\Core\Config;
