@@ -48,7 +48,7 @@ class ApiClient extends BaseApiClient
     /**
      * @template TResponse
      * @param BaseMessageHandler<TResponse> $handler
-     * @return mixed
+     * @return TResponse
      */
     protected function invoke(BaseMessageHandler $handler): mixed
     {
