@@ -39,7 +39,7 @@ class CoreClient extends ApiClient
             $cache->set('productVersions', $versions, time() + 3600);
         }
 
-        return ($versions[$productCode] ?? null)?->LatestVersion ?? '1.0';
+        return ($versions[$productCode] ?? null)->LatestVersion ?? '1.0';
     }
 
 

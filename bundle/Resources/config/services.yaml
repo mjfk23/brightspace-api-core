@@ -5,10 +5,6 @@ services:
 
   Brightspace\Api\Core\:
     resource: "../../../src/"
-    exclude:
-      - "../../../src/DependencyInjection/"
-      - "../../../src/Entity/"
-      - "../../../src/Kernel.php"
 
   Brightspace\Api\Core\Config:
     arguments:

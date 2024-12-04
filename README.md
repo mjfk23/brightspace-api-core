@@ -1,1 +1,1 @@
-# mjfk23/brightspace-api
+# mjfk23/brightspace-api-core

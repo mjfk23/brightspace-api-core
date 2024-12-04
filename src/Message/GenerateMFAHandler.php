@@ -8,7 +8,7 @@ use Brightspace\Api\Core\Model\LoginUri;
 use Brightspace\Api\Core\Model\MfaBody;
 use Gadget\Http\Message\MessageHandler;
 use Gadget\Http\Message\RequestBuilder;
-use Gadget\Security\MFA\TOTP;
+use Gadget\Util\MFA\TOTP;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -56,7 +56,10 @@ class GenerateMFAHandler extends MessageHandler
          * @param string[]|false $grep
          * @return string
          */
-        $subject = fn (array|false $grep): string => is_array($grep) ? (string)(end($grep) ?? "") : "";
+        $subject = function (array|false $grep): string {
+            $v = (is_array($grep) ? array_pop($grep) : null) ?? "";
+            return is_string($v) ? $v : "";
+        };
 
         $matches = [];
         preg_match(
