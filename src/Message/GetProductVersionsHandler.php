@@ -8,7 +8,6 @@ use Brightspace\Api\Core\Model\ProductVersion;
 use Gadget\Http\Message\MessageHandler;
 use Gadget\Http\Message\RequestBuilder;
 use Gadget\Io\Cast;
-use Gadget\Io\JSON;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -50,7 +49,7 @@ class GetProductVersionsHandler extends MessageHandler
         }
 
         return Cast::toTypedMap(
-            JSON::decode($response->getBody()->getContents()),
+            $this->jsonToArray($response),
             $this->createProductVersion(...),
             fn(ProductVersion $pv): string => $pv->ProductCode
         );

@@ -507,16 +507,16 @@
         },
         {
             "name": "mjfk23/gadget-console",
-            "version": "v2.0.0",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mjfk23/gadget-console.git",
-                "reference": "8fc7b9533a8a7b24705b7dc3c20f09032371dbb4"
+                "reference": "e1f0d9ad61e37641e37eb419dda22c0cf5765814"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mjfk23/gadget-console/zipball/8fc7b9533a8a7b24705b7dc3c20f09032371dbb4",
-                "reference": "8fc7b9533a8a7b24705b7dc3c20f09032371dbb4",
+                "url": "https://api.github.com/repos/mjfk23/gadget-console/zipball/e1f0d9ad61e37641e37eb419dda22c0cf5765814",
+                "reference": "e1f0d9ad61e37641e37eb419dda22c0cf5765814",
                 "shasum": ""
             },
             "require": {
@@ -559,7 +559,7 @@
                 "source": "https://github.com/mjfk23/gadget-console",
                 "wiki": "https://github.com/mjfk23/gadget-console/wiki"
             },
-            "time": "2024-12-03T16:47:02+00:00"
+            "time": "2024-12-04T19:32:58+00:00"
         },
         {
             "name": "mjfk23/gadget-core",
@@ -616,16 +616,16 @@
         },
         {
             "name": "mjfk23/gadget-http",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mjfk23/gadget-http.git",
-                "reference": "b96d80c7c91e951e841eaabbef0ae9ee7921c14c"
+                "reference": "0c8118e55597650e290567e52a26706131770e9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mjfk23/gadget-http/zipball/b96d80c7c91e951e841eaabbef0ae9ee7921c14c",
-                "reference": "b96d80c7c91e951e841eaabbef0ae9ee7921c14c",
+                "url": "https://api.github.com/repos/mjfk23/gadget-http/zipball/0c8118e55597650e290567e52a26706131770e9e",
+                "reference": "0c8118e55597650e290567e52a26706131770e9e",
                 "shasum": ""
             },
             "require": {
@@ -671,7 +671,7 @@
                 "source": "https://github.com/mjfk23/gadget-http",
                 "wiki": "https://github.com/mjfk23/gadget-http/wiki"
             },
-            "time": "2024-12-03T16:10:57+00:00"
+            "time": "2024-12-06T17:03:47+00:00"
         },
         {
             "name": "mjfk23/gadget-log",
@@ -782,20 +782,21 @@
         },
         {
             "name": "mjfk23/gadget-process",
-            "version": "v1.0.0",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mjfk23/gadget-process.git",
-                "reference": "28acd7807c8fcb68af12933a92bc16b78ced8105"
+                "reference": "e8c26bbe4e00defbb2fd6c46d379a5422a896076"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mjfk23/gadget-process/zipball/28acd7807c8fcb68af12933a92bc16b78ced8105",
-                "reference": "28acd7807c8fcb68af12933a92bc16b78ced8105",
+                "url": "https://api.github.com/repos/mjfk23/gadget-process/zipball/e8c26bbe4e00defbb2fd6c46d379a5422a896076",
+                "reference": "e8c26bbe4e00defbb2fd6c46d379a5422a896076",
                 "shasum": ""
             },
             "require": {
                 "mjfk23/gadget-core": "^2.0",
+                "mjfk23/symfony-bundle": "^1.0",
                 "php": "^8.1",
                 "symfony/process": "6.4.*"
             },
@@ -808,7 +809,10 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Gadget\\Process\\": "src/"
+                    "Gadget\\Process\\": [
+                        "src/",
+                        "bundle/"
+                    ]
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -828,7 +832,7 @@
                 "source": "https://github.com/mjfk23/gadget-process",
                 "wiki": "https://github.com/mjfk23/gadget-process/wiki"
             },
-            "time": "2024-12-03T16:25:36+00:00"
+            "time": "2024-12-04T19:31:46+00:00"
         },
         {
             "name": "mjfk23/psr-http-contracts",
@@ -944,16 +948,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "3.8.0",
+            "version": "3.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "32e515fdc02cdafbe4593e30a9350d486b125b67"
+                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/32e515fdc02cdafbe4593e30a9350d486b125b67",
-                "reference": "32e515fdc02cdafbe4593e30a9350d486b125b67",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
+                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
                 "shasum": ""
             },
             "require": {
@@ -1031,7 +1035,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/3.8.0"
+                "source": "https://github.com/Seldaek/monolog/tree/3.8.1"
             },
             "funding": [
                 {
@@ -1043,7 +1047,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-12T13:57:08+00:00"
+            "time": "2024-12-05T17:15:07+00:00"
         },
         {
             "name": "php-http/discovery",
