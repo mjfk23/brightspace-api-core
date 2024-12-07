@@ -45,9 +45,20 @@ class CoreApiClient extends AuthClient
     public function isLoggedIn(): bool
     {
         $cookieJar = $this->getClient()->getCookieJar();
+        $d2lSecureSessionVal = $cookieJar->getCookie(
+            $this->config->d2lHost,
+            '/',
+            'd2lSecureSessionVal'
+        );
+        $d2lSessionVal = $cookieJar->getCookie(
+            $this->config->d2lHost,
+            '/',
+            'd2lSessionVal'
+        );
+
         return (
-            $cookieJar->getCookie($this->config->d2lHost, '/', 'd2lSecureSessionVal') !== null
-            && $cookieJar->getCookie($this->config->d2lHost, '/', 'd2lSessionVal') !== null
+            ($d2lSecureSessionVal?->isExpired() ?? true) === false
+            && ($d2lSessionVal?->isExpired() ?? true) === false
         );
     }
 
